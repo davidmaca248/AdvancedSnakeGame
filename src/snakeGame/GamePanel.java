@@ -1,3 +1,4 @@
+package snakeGame;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,14 +20,19 @@ public class GamePanel extends JPanel implements ActionListener{
 	
 	int bodyParts = 6;
 	int applesEaten;
+	
+	/* apple coordinates */
 	int appleX;
 	int appleY;
 	
+	/* list of wall coordinates */
 	int wallX[];
 	int wallY[];
+	/* new wall coordinate */
 	int newWallX;
 	int newWallY;
 	int numWalls;
+	/* more walls spawn the bigger the map */
 	int wallsNeeded;
 	
 	char direction = 'R';
@@ -150,7 +156,7 @@ public class GamePanel extends JPanel implements ActionListener{
 				}
 				/* body */
 				else {
-					g.setColor(Color.green);
+					g.setColor(Color.decode("#34e8e2"));
 					g.fillRect(x[i], y[i], unitSize, unitSize);
 				}			
 			}

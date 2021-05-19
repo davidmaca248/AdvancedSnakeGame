@@ -1,3 +1,6 @@
+package snakeGame;
+
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -16,17 +19,16 @@ import javax.swing.Timer;
 /* Initializes the GUI */
 public class GameFrame extends JFrame implements ActionListener{
 	
+	Timer timer;
 	private final int FRAME_SIZE = 800, SMALL = 50, MEDIUM = 25, LARGE = 10;
 	private int mapSize = 25, gameMode = 0;
-	
-	private JPanel startPanel, modePanel, modeBtnPanel, sizePanel, sizeBtnPanel, gamePanel, overPanel;
-	private JLabel startLabel, sizeLabel, modeLabel;
-	private JButton startBtn, smallBtn, medBtn, largeBtn, normalBtn, wallBtn, speedBtn, mapSizeBtn, gameModeBtn, restartBtn;
 	
 	/* 0 = startPanel, 1 = modePanel, 2 = sizePanel, 3 = gamePanel, 4 = overPanel*/
 	private int curPanel = 0;  
 	
-	Timer timer;
+	private JPanel startPanel, modePanel, modeBtnPanel, sizePanel, sizeBtnPanel, gamePanel, overPanel;
+	private JLabel startLabel, sizeLabel, modeLabel;
+	private JButton startBtn, smallBtn, medBtn, largeBtn, normalBtn, wallBtn, speedBtn, mapSizeBtn, gameModeBtn, restartBtn;
 	
 	public GameFrame(){
 		
@@ -229,8 +231,6 @@ public class GameFrame extends JFrame implements ActionListener{
 					curPanel = 1; 
 					this.remove(startPanel);
 					this.add(modePanel);
-					this.revalidate();          /* Refreshes the frame */
-					this.repaint();
 				}
 				break;
 			}
@@ -253,8 +253,6 @@ public class GameFrame extends JFrame implements ActionListener{
 				curPanel = 2;
 				this.remove(modePanel);
 				this.add(sizePanel);
-				this.revalidate();
-				this.repaint();
 				break;
 			}
 			case(2):{  /* sizePanel */
@@ -277,8 +275,6 @@ public class GameFrame extends JFrame implements ActionListener{
 				this.remove(sizePanel);
 				this.add(gamePanel);
 				gamePanel.requestFocusInWindow();   /* use gp's keyAdapter */
-				this.revalidate();
-				this.repaint();
 				break;
 			}
 			case(3):{  /* gamePanel */
@@ -287,8 +283,6 @@ public class GameFrame extends JFrame implements ActionListener{
 					/* switch to overPanel */
 					curPanel = 4;
 					this.add(overPanel,BorderLayout.SOUTH);
-					this.revalidate();
-					this.repaint();
 				}
 				break;
 			}
@@ -319,11 +313,11 @@ public class GameFrame extends JFrame implements ActionListener{
 				else {  /* no button clicked */
 					break;
 				}
-				
-				this.revalidate();          /* Refreshes the frame */
-				this.repaint();
 				break;
 			}
 		}
+		
+		this.revalidate();          /* Refreshes the frame */
+		this.repaint();
 	}
 }

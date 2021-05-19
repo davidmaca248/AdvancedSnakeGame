@@ -1,3 +1,4 @@
+package snakeGame;
 public class SnakeMain {
 
 	public static void main(String[] args) {
