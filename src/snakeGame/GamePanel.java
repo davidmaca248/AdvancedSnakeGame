@@ -41,9 +41,7 @@ public class GamePanel extends JPanel implements ActionListener{
 	Random random;
 	int mode = 0;  /* 0 = normal, 1 = wall, 2 = speed */
 	
-	GamePanel(){
-		
-	}
+	GamePanel(){}
 	
 	GamePanel(int size, int gameMode){
 		mode = gameMode;
@@ -169,7 +167,7 @@ public class GamePanel extends JPanel implements ActionListener{
 						
 			/* Score */
 			g.setColor(Color.lightGray);
-			g.setFont( new Font("Ink Free",Font.BOLD, 40));
+			g.setFont( new Font("comic sans MS",Font.BOLD, 40));
 			FontMetrics metrics = getFontMetrics(g.getFont());
 			g.drawString("Score: " + applesEaten, (screenWidth - metrics.stringWidth("Score: "+ applesEaten))/2, g.getFont().getSize());
 		}
@@ -345,13 +343,13 @@ public class GamePanel extends JPanel implements ActionListener{
 		
 		//Score text (same spot)
 		g.setColor(Color.red);
-		g.setFont( new Font("Ink Free",Font.BOLD, 40));
+		g.setFont( new Font("comic sans MS",Font.BOLD, 40));
 		FontMetrics metrics1 = getFontMetrics(g.getFont());
 		g.drawString("Score: "+ applesEaten, (screenWidth - metrics1.stringWidth("Score: "+ applesEaten))/2, g.getFont().getSize());
 		
 		//Game Over text
 		g.setColor(Color.red);
-		g.setFont( new Font("Ink Free",Font.BOLD, 75));
+		g.setFont( new Font("comic sans MS",Font.BOLD, 75));
 		FontMetrics metrics2 = getFontMetrics(g.getFont());
 		g.drawString("Game Over", (screenWidth - metrics2.stringWidth("Game Over"))/2, screenHeight/3);
 		

@@ -1,7 +1,5 @@
 package snakeGame;
 
-
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,7 +7,6 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -44,20 +41,20 @@ public class GameFrame extends JFrame implements ActionListener{
 		
 		startLabel = new JLabel();
 		startLabel.setText("Snake Game");
-		startLabel.setForeground(Color.cyan);
-		startLabel.setBackground(Color.blue);
+		startLabel.setForeground(new Color(0,255,0));
+		startLabel.setBackground(new Color(0,128,0));
 		startLabel.setOpaque(true);
 		startLabel.setPreferredSize(new Dimension(FRAME_SIZE,550));
 		startLabel.setHorizontalAlignment(JLabel.CENTER);
-		startLabel.setFont(new Font("Arial",Font.BOLD,100));
+		startLabel.setFont(new Font("comic sans MS",Font.BOLD,100));
 
 		startBtn = new JButton();
 		startBtn.setText("Click here to start");
 		startBtn.setFocusable(false);
 		startBtn.setPreferredSize(new Dimension(FRAME_SIZE,200));
-		startBtn.setFont(new Font("Serif",Font.BOLD,30));
+		startBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		startBtn.setForeground(Color.black);
-		startBtn.setBackground(Color.cyan);
+		startBtn.setBackground(new Color(255,215,0));
 		startBtn.addActionListener(this);
 
 		startPanel.add(startLabel,BorderLayout.NORTH);
@@ -69,15 +66,15 @@ public class GameFrame extends JFrame implements ActionListener{
 		
 		modeLabel = new JLabel();
 		modeLabel.setText("Choose Game Mode");
-		modeLabel.setForeground(Color.red);
-		modeLabel.setBackground(Color.darkGray);
+		modeLabel.setForeground(new Color(135,206,250));
+		modeLabel.setBackground(new Color(138,43,226));
 		modeLabel.setOpaque(true);
 		modeLabel.setPreferredSize(new Dimension(FRAME_SIZE,400));
 		modeLabel.setHorizontalAlignment(JLabel.CENTER);
-		modeLabel.setFont(new Font("Arial",Font.BOLD,50));
+		modeLabel.setFont(new Font("comic sans MS",Font.BOLD,50));
 		
 		modeBtnPanel = new JPanel();
-		modeBtnPanel.setBackground(Color.orange);
+		modeBtnPanel.setBackground(Color.magenta);
 		modeBtnPanel.setPreferredSize(new Dimension(FRAME_SIZE,350));
 		modeBtnPanel.setLayout(new FlowLayout(FlowLayout.CENTER,45,75));
 		
@@ -85,27 +82,27 @@ public class GameFrame extends JFrame implements ActionListener{
 		normalBtn.setText("Normal");
 		normalBtn.setFocusable(false);
 		normalBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		normalBtn.setFont(new Font("Serif",Font.BOLD,30));
+		normalBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		normalBtn.setForeground(Color.black);
-		normalBtn.setBackground(Color.green);
+		normalBtn.setBackground(new Color(64,224,208));
 		normalBtn.addActionListener(this);
 		
 		wallBtn = new JButton();
 		wallBtn.setText("Wall");
 		wallBtn.setFocusable(false);
 		wallBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		wallBtn.setFont(new Font("Serif",Font.BOLD,30));
+		wallBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		wallBtn.setForeground(Color.black);
-		wallBtn.setBackground(Color.green);
+		wallBtn.setBackground(new Color(64,224,208));
 		wallBtn.addActionListener(this);
 		
 		speedBtn = new JButton();
 		speedBtn.setText("Speed");
 		speedBtn.setFocusable(false);
 		speedBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		speedBtn.setFont(new Font("Serif",Font.BOLD,30));
+		speedBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		speedBtn.setForeground(Color.black);
-		speedBtn.setBackground(Color.green);
+		speedBtn.setBackground(new Color(64,224,208));
 		speedBtn.addActionListener(this);
 		
 		modeBtnPanel.add(normalBtn);
@@ -122,15 +119,15 @@ public class GameFrame extends JFrame implements ActionListener{
 		
 		sizeLabel = new JLabel();
 		sizeLabel.setText("Choose Map Size");
-		sizeLabel.setForeground(Color.red);
-		sizeLabel.setBackground(Color.orange);
+		sizeLabel.setForeground(new Color(210,105,30));
+		sizeLabel.setBackground(new Color(0,250,154));
 		sizeLabel.setOpaque(true);
 		sizeLabel.setPreferredSize(new Dimension(FRAME_SIZE,400));
 		sizeLabel.setHorizontalAlignment(JLabel.CENTER);
-		sizeLabel.setFont(new Font("Arial",Font.BOLD,50));
+		sizeLabel.setFont(new Font("comic sans MS",Font.BOLD,50));
 		
 		sizeBtnPanel = new JPanel();
-		sizeBtnPanel.setBackground(Color.blue);
+		sizeBtnPanel.setBackground(new Color(30,144,255));
 		sizeBtnPanel.setPreferredSize(new Dimension(FRAME_SIZE,350));
 		sizeBtnPanel.setLayout(new FlowLayout(FlowLayout.CENTER,45,75));
 		
@@ -138,27 +135,27 @@ public class GameFrame extends JFrame implements ActionListener{
 		smallBtn.setText("Small");
 		smallBtn.setFocusable(false);
 		smallBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		smallBtn.setFont(new Font("Serif",Font.BOLD,30));
+		smallBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		smallBtn.setForeground(Color.black);
-		smallBtn.setBackground(Color.cyan);
+		smallBtn.setBackground(new Color(255,165,0));
 		smallBtn.addActionListener(this);
 		
 		medBtn = new JButton();
 		medBtn.setText("Medium");
 		medBtn.setFocusable(false);
 		medBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		medBtn.setFont(new Font("Serif",Font.BOLD,30));
+		medBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		medBtn.setForeground(Color.black);
-		medBtn.setBackground(Color.cyan);
+		medBtn.setBackground(new Color(255,165,0));
 		medBtn.addActionListener(this);
 		
 		largeBtn = new JButton();
 		largeBtn.setText("Large");
 		largeBtn.setFocusable(false);
 		largeBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		largeBtn.setFont(new Font("Serif",Font.BOLD,30));
+		largeBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		largeBtn.setForeground(Color.black);
-		largeBtn.setBackground(Color.cyan);
+		largeBtn.setBackground(new Color(255,165,0));
 		largeBtn.addActionListener(this);
 		
 		sizeBtnPanel.add(smallBtn);
@@ -179,7 +176,7 @@ public class GameFrame extends JFrame implements ActionListener{
 		restartBtn.setText("Restart");
 		restartBtn.setFocusable(false);
 		restartBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		restartBtn.setFont(new Font("Serif",Font.BOLD,30));
+		restartBtn.setFont(new Font("comic sans MS",Font.BOLD,30));
 		restartBtn.setForeground(Color.black);
 		restartBtn.setBackground(Color.pink);
 		restartBtn.addActionListener(this);
@@ -188,7 +185,7 @@ public class GameFrame extends JFrame implements ActionListener{
 		mapSizeBtn.setText("Map Size");
 		mapSizeBtn.setFocusable(false);
 		mapSizeBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		mapSizeBtn.setFont(new Font("Serif",Font.BOLD,25));
+		mapSizeBtn.setFont(new Font("comic sans MS",Font.BOLD,25));
 		mapSizeBtn.setForeground(Color.black);
 		mapSizeBtn.setBackground(Color.pink);
 		mapSizeBtn.addActionListener(this);
@@ -197,7 +194,7 @@ public class GameFrame extends JFrame implements ActionListener{
 		gameModeBtn.setText("Game Mode");
 		gameModeBtn.setFocusable(false);
 		gameModeBtn.setPreferredSize(new Dimension(FRAME_SIZE/4,200));
-		gameModeBtn.setFont(new Font("Serif",Font.BOLD,25));
+		gameModeBtn.setFont(new Font("comic sans MS",Font.BOLD,25));
 		gameModeBtn.setForeground(Color.black);
 		gameModeBtn.setBackground(Color.pink);
 		gameModeBtn.addActionListener(this);
